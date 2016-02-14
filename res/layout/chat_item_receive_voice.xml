@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/chat_item_receive_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/avatar_iv"
+            style="@style/chat_item_receiver_avatar_style"
+             />
+
+        <TextView
+            android:id="@+id/display_name_tv"
+            style="@style/chat_display_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/avatar_iv" />
+
+        <FrameLayout
+            android:id="@+id/voice_fl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/display_name_tv"
+            android:layout_toRightOf="@id/avatar_iv"
+            android:layout_centerVertical="true"
+            android:gravity="left" >
+
+            <TextView
+                android:id="@+id/msg_content"
+                style="@style/chat_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@drawable/receive_msg"
+                android:maxWidth="220dp" />
+
+            <ImageView
+                android:id="@+id/voice_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical|left"
+                android:background="@anim/voice_receive" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/voice_fl"
+            android:layout_below="@id/voice_fl"
+            android:layout_marginTop="15dp"
+            android:baselineAligned="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/def_alarm" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@color/color_dark_gray" />
+
+            <TextView
+                android:id="@+id/send_time_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:text="09:55"
+                android:textColor="#555756"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/voice_length_tv"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/display_name_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/voice_fl"
+            android:layout_centerVertical="true"
+            android:text="@string/voice_length"
+            android:textColor="#555555"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/read_status_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/display_name_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="22dp"
+            android:layout_toRightOf="@id/voice_length_tv"
+            android:src="@drawable/voice_unread" />
+    </RelativeLayout>
+
+</LinearLayout>
