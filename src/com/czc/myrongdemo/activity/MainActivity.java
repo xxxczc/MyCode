@@ -43,8 +43,6 @@ import com.czc.myrongdemo.utils.thread.ThreadWithDialogTask;
 import com.google.gson.Gson;
 //first commit
 
-//second commit
-
 public class MainActivity extends ActionBarActivity implements OnClickListener {
 	
 	//'czc2'的token
