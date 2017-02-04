@@ -41,6 +41,7 @@ import com.czc.myrongdemo.utils.ThreadPoolManager;
 import com.czc.myrongdemo.utils.thread.ThreadWithDialogListener;
 import com.czc.myrongdemo.utils.thread.ThreadWithDialogTask;
 import com.google.gson.Gson;
+//first commit
 
 public class MainActivity extends ActionBarActivity implements OnClickListener {
 	
